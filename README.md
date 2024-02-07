@@ -1,0 +1,2 @@
+Java Calculator
+This is a simple command-line calculator application written in Java. It allows users to perform various mathematical operations, including addition, subtraction, multiplication, division, percentage calculation, square, and square root. The calculator is designed to handle both valid and invalid user inputs, providing a user-friendly interface with error handling for a seamless user experience.
