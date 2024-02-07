@@ -8,8 +8,9 @@ public class Calculator {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         CalculatorOperations operation = new CalculatorOperations();
+            System.out.println("-----------------CALCULATOR----------------");
         while (true) {
-            System.out.println("----------Enter Your Choice----------");
+            System.out.println("-------------Enter Your Choice-------------");
             System.out.println("1.Addition");
             System.out.println("2.Subtraction");
             System.out.println("3.Multiplication");
@@ -17,31 +18,32 @@ public class Calculator {
             System.out.println("5.Percentage");
             System.out.println("6.Square");
             System.out.println("7.Square root");
-            System.out.println("8.Exit");
-            System.out.println("-------------------------------------");
+            System.out.println("8.Cube");
+            System.out.println("9.Modulus");
+            System.out.println("0.Exit");
+            System.out.println("-------------------------------------------");
             try {
                 System.out.print("Enter your choice: ");
-
                 int choice = sc.nextInt();
-                if(choice <1 || choice>8) {
-                    System.out.println("Invalid choice, Please enter number between 1 to 7");
-                    continue;
-                }
-                if (choice == 8) {
+
+                if (choice == 0) {
                     System.out.println("Thank you !!");
                     break;
                 }
                 switch (choice) {
                     case 1 -> System.out.println("Addition is: " + operation.addition());
-                    case 2 -> System.out.println("subtraction is: " + operation.subtract());
+                    case 2 -> System.out.println("Subtraction is: " + operation.subtract());
                     case 3 -> System.out.println("Multiplication is: " + operation.multiply());
                     case 4 -> System.out.println("Division is: " + operation.divide());
                     case 5 -> System.out.println("Percentage is: " + operation.percentage());
                     case 6 -> System.out.println("Square is: " + operation.square());
                     case 7 -> System.out.println("Square-root is: " + operation.squareRoot());
+                    case 8 -> System.out.println("Cube is: "+operation.cube());
+                    case 9 -> System.out.println("Modulus is: "+operation.modulus());
+                    default -> System.out.println("Invalid choice, Please enter number between 1 to 9");
                 }
             } catch ( InputMismatchException e) {
-                System.out.println("Error: "+e+": Enter number");
+                System.out.println("Error: "+e+": Please Enter number");
                 sc.nextLine();
             }
             catch (ArithmeticException | IllegalArgumentException e){

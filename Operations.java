@@ -10,6 +10,9 @@ abstract class Operations{
     abstract double percentage();
     abstract double square();
     abstract double squareRoot();
+    abstract double cube();
+    abstract double modulus();
+
 }
 
 class CalculatorOperations extends Operations{
@@ -18,11 +21,12 @@ class CalculatorOperations extends Operations{
     double addition() {
         Scanner sc = new Scanner(System.in);
         double sum=0;
-        double i=1;
-        System.out.println("Enter multiple numbers (Enter 0 to get total addition): ");
-        while (i!=0){
-            i=sc.nextDouble();
-            sum+=i;
+        double num=1;
+        System.out.println("Enter multiple numbers separated by space : ");
+        System.out.println("(Enter 0 at end to get total addition)");
+        while (num!=0){
+            num=sc.nextDouble();
+            sum+=num;
         }
         return sum;
     }
@@ -31,17 +35,18 @@ class CalculatorOperations extends Operations{
     double subtract(){
         Scanner sc = new Scanner(System.in);
         double sub=0;
-        double i=1;
-        System.out.println("Enter multiple numbers (Enter 0 to get total subtraction): ");
-        int fn=0;
-        while (i!=0){
-            i=sc.nextDouble();
-            if(fn==0) {
-                fn++;
-                sub=i;
+        double num=1;
+        System.out.println("Enter multiple numbers separated by space : ");
+        System.out.println("(Enter 0 at end to get total addition)");
+        int flag=0;
+        while (num!=0){
+            num=sc.nextDouble();
+            if(flag==0) {
+                flag++;
+                sub=num;
             }
             else {
-                sub -= i;
+                sub -= num;
             }
         }
         return sub;
@@ -51,11 +56,12 @@ class CalculatorOperations extends Operations{
     double multiply() {
         Scanner sc = new Scanner(System.in);
         double mul=1;
-        double i=0;
-        System.out.println("Enter multiple numbers (Enter 1 to get total multiplication): ");
-        while (i!=1){
-            i=sc.nextDouble();
-            mul*=i;
+        double num=0;
+        System.out.println("Enter multiple numbers separated by space: ");
+        System.out.println("(Enter 1 at end to get total multiplication)");
+        while (num!=1){
+            num=sc.nextDouble();
+            mul*=num;
         }
         return mul;
     }
@@ -96,5 +102,23 @@ class CalculatorOperations extends Operations{
         double num1 = sc.nextDouble();
         if (num1>=0) return Math.sqrt(num1);
         else throw new IllegalArgumentException("Invalid input for square root, enter positive number");
+    }
+
+    @Override
+    double cube() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter number: ");
+        double num1 = sc.nextDouble();
+        return num1*num1*num1;
+    }
+
+    @Override
+    double modulus() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter number 1: ");
+        double num1 = sc.nextDouble();
+        System.out.print("Enter number 2: ");
+        double num2 = sc.nextDouble();
+        return num1%num2;
     }
 }
