@@ -40,8 +40,6 @@ public class Calculator {
                     case 6 -> System.out.println("Square is: " + operation.square());
                     case 7 -> System.out.println("Square-root is: " + operation.squareRoot());
                 }
-
-
             } catch ( InputMismatchException e) {
                 System.out.println("Error: "+e+": Enter number");
                 sc.nextLine();
