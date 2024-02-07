@@ -8,7 +8,7 @@ public class Calculator {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         CalculatorOperations operation = new CalculatorOperations();
-            System.out.println("-----------------CALCULATOR----------------");
+        System.out.println("-----------------CALCULATOR----------------");
         while (true) {
             System.out.println("-------------Enter Your Choice-------------");
             System.out.println("1.Addition");
