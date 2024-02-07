@@ -31,29 +31,15 @@ public class Calculator {
                     System.out.println("Thank you !!");
                     break;
                 }
-                    switch (choice){
-                        case 1:
-                            System.out.println("Addition is: " + operation.addition());
-                            break;
-                        case 2:
-                            System.out.println("subtraction is: " + operation.subtract());
-                            break;
-                        case 3:
-                            System.out.println("Multiplication is: "+operation.multiply());
-                            break;
-                        case 4:
-                            System.out.println("Division is: "+operation.divide());
-                            break;
-                        case 5:
-                            System.out.println("Percentage is: "+operation.percentage());
-                            break;
-                        case 6:
-                            System.out.println("Square is: "+operation.square());
-                            break;
-                        case 7:
-                            System.out.println("Square-root is: "+operation.squareRoot());
-                            break;
-                    }
+                switch (choice) {
+                    case 1 -> System.out.println("Addition is: " + operation.addition());
+                    case 2 -> System.out.println("subtraction is: " + operation.subtract());
+                    case 3 -> System.out.println("Multiplication is: " + operation.multiply());
+                    case 4 -> System.out.println("Division is: " + operation.divide());
+                    case 5 -> System.out.println("Percentage is: " + operation.percentage());
+                    case 6 -> System.out.println("Square is: " + operation.square());
+                    case 7 -> System.out.println("Square-root is: " + operation.squareRoot());
+                }
 
 
             } catch ( InputMismatchException e) {
