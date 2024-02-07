@@ -31,15 +31,15 @@ public class Calculator {
                     break;
                 }
                 switch (choice) {
-                    case 1 -> System.out.println("Addition is: " + operation.addition());
-                    case 2 -> System.out.println("Subtraction is: " + operation.subtract());
-                    case 3 -> System.out.println("Multiplication is: " + operation.multiply());
-                    case 4 -> System.out.println("Division is: " + operation.divide());
-                    case 5 -> System.out.println("Percentage is: " + operation.percentage());
-                    case 6 -> System.out.println("Square is: " + operation.square());
-                    case 7 -> System.out.println("Square-root is: " + operation.squareRoot());
-                    case 8 -> System.out.println("Cube is: "+operation.cube());
-                    case 9 -> System.out.println("Modulus is: "+operation.modulus());
+                    case 1 -> System.out.printf("Addition is: %.2f\n" , operation.addition());
+                    case 2 -> System.out.printf("Subtraction is: %.2f\n" , operation.subtract());
+                    case 3 -> System.out.printf("Multiplication is: %.2f\n" , operation.multiply());
+                    case 4 -> System.out.printf("Division is: %.2f\n" , operation.divide());
+                    case 5 -> System.out.printf("Percentage is: %.2f\n" , operation.percentage());
+                    case 6 -> System.out.printf("Square is: %.2f\n" , operation.square());
+                    case 7 -> System.out.printf("Square-root is: %.2f\n" , operation.squareRoot());
+                    case 8 -> System.out.printf("Cube is: %.2f\n" , operation.cube());
+                    case 9 -> System.out.printf("Modulus is: %.2f\n" , operation.modulus());
                     default -> System.out.println("Invalid choice, Please enter number between 1 to 9");
                 }
             } catch ( InputMismatchException e) {
